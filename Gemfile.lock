@@ -1,3 +1,32 @@
+GIT
+  remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
+  revision: f7c62e3d4759d8a1446d50609b58248110ba02c8
+  branch: bootstrap3
+  specs:
+    twitter-bootstrap-rails (2.2.7)
+      actionpack (>= 3.1)
+      execjs
+      rails (>= 3.1)
+      railties (>= 3.1)
+
+GIT
+  remote: git://github.com/thoughtbot/paperclip.git
+  revision: 144693101637b784ef3524749019ff8112c0df81
+  specs:
+    paperclip (3.5.2)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
+
+GIT
+  remote: https://github.com/stripe/stripe-ruby
+  revision: 294d6c63b3aa5d63d03f58872622c732a54b73bc
+  specs:
+    stripe (1.8.8)
+      multi_json (>= 1.0.4, < 2)
+      rest-client (~> 1.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -44,11 +73,19 @@ GEM
       activesupport (>= 3.0.0)
     arel (3.0.2)
     atomic (1.1.14)
+    aws-sdk (1.23.0)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4, < 1.6.0)
+      uuidtools (~> 2.1)
     bcrypt-ruby (3.1.2)
     bourbon (3.1.8)
       sass (>= 3.2.0)
       thor
     builder (3.0.4)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.3)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -56,6 +93,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    commonjs (0.2.7)
     devise (3.1.1)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -83,6 +121,12 @@ GEM
     kaminari (0.14.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    less (2.4.0)
+      commonjs (~> 0.2.7)
+    less-rails (2.4.2)
+      actionpack (>= 3.1)
+      less (~> 2.4.0)
+    libv8 (3.16.14.3)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -93,6 +137,7 @@ GEM
       polyamorous (~> 0.5.0)
     mime-types (1.25)
     multi_json (1.8.2)
+    nokogiri (1.5.10)
     orm_adapter (0.4.0)
     pg (0.17.0)
     polyamorous (0.5.0)
@@ -123,8 +168,11 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
+    ref (1.0.5)
     responders (1.0.0)
       railties (>= 3.2, < 5)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     sass (3.2.12)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -135,6 +183,9 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    therubyracer (0.12.0)
+      libv8 (~> 3.16.14.0)
+      ref
     thor (0.18.1)
     thread_safe (0.1.3)
       atomic
@@ -146,6 +197,7 @@ GEM
     uglifier (2.2.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    uuidtools (2.1.4)
     warden (1.2.3)
       rack (>= 1.0)
 
@@ -154,10 +206,17 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
+  aws-sdk
   coffee-rails (~> 3.2.1)
+  devise
   jquery-rails (= 2.3.0)
+  less-rails
   meta_search (>= 1.1.0.pre)
+  paperclip!
   pg
   rails (= 3.2.15)
-  sass-rails
+  sass-rails (~> 3.2.3)
+  stripe!
+  therubyracer
+  twitter-bootstrap-rails!
   uglifier (>= 1.0.3)
