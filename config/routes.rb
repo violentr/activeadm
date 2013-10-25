@@ -1,5 +1,6 @@
 Activeadmin::Application.routes.draw do
   root :to => "products#index"
+  resource :product
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

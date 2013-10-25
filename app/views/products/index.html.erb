@@ -1,8 +1,8 @@
 <div class='row'>
 	<% @products.each do |product| %>
-	<div class='col-md-3'>
-		<%= product.name %>
-		<div class="">Price: <%= number_to_currency(product.price,unit: "&pound;",precision: 2) %></div>
-		<% end %>
-	</div>
+		<div class='col-md-3'>
+			<strong><%= product.name %></strong></br>
+			Price: <%= number_to_currency(product.price,unit: "&pound;",precision: 2) %>
+		</div>
+	<% end %>
 </div>
